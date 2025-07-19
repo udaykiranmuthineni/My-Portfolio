@@ -5,8 +5,8 @@ const Profile = () => {
   return (
     <section id="profile" className="hero-section">
       <div className="hero-left">
-        <h1>
-          Hi There,<br />
+        <h1 className="hero-heading">
+          Hi <span classname="hide">There, </span><br />
           I'm <span className="highlight-orange">Uday</span> <span className="highlight-blue">Kiran</span>
         </h1>
         <p><span className="highlight-red">Welcome</span> to my personal portfolio built with React.js.<br>

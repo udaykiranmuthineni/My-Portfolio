@@ -55,7 +55,7 @@ const Projects = () => {
       demo: "https://resume-builder-project-demo.netlify.app/"
     },
     {
-      title: "Project 4 (Coming Soon)",
+      title: "Personal Portfolio",
       image: projectImg4, // reuse or use a placeholder
       bullets: [
   "Designed a modern portfolio site to showcase work, skills, and contact details cleanly.",
@@ -64,8 +64,8 @@ const Projects = () => {
   "Site is fully responsive, loads fast, and works well across devices and screen sizes.",
   "Used HTML, CSS, JS,React JS, GitHub Pages."
 ],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/udaykiranmuthineni/My-Portfolio",
+      demo: "https://muthineni-uday-portfolio.netlify.app/"
     }
   ];
 
