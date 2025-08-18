@@ -1,6 +1,37 @@
+/* Global Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+/* Reduced dark mode box shadows (20% lighter) for all card-like elements */
+[data-theme="dark"] .about-image-box,
+[data-theme="dark"] .edu-card,
+[data-theme="dark"] .skill-card,
+[data-theme="dark"] .project-row,
+[data-theme="dark"] .contact-box,
+[data-theme="dark"] .contact-form-box {
+  box-shadow: 
+    0 6.4px 24px rgba(0, 0, 0, 0.72),  /* main dark shadow reduced by 20% */
+    0 3.2px 9.6px rgba(0, 0, 0, 0.48); /* secondary shadow reduced by 20% */
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 12px;
+}
+
+/* Apply globally */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
 body {
   margin: 0;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   font-family: 'Segoe UI', sans-serif;
   color: #333;
 }
@@ -10,8 +41,7 @@ section {
   text-align: center;
 }
 
-h1,
-h2 {
+h1,h2 {
   font-weight: 700;
 }
 
@@ -31,7 +61,8 @@ h2 {
 
 /* Navbar Styling */
 .navbar {
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,11 +74,11 @@ h2 {
 .nav-left {
   font-size: 35px;
   font-weight: bold;
-  color: #000000ee;
+  color: var(--text-color);
 }
 
 .nav-right a {
-  color: rgb(0, 0, 0);
+  color: var(--text-color);
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
@@ -56,23 +87,72 @@ h2 {
 }
 
 .nav-right a:hover {
-  color: #ff4d4d;
+  color: #ff4d4d; /* Accent stays same */
+}
+
+/* Switch Button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "☀️";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+  content: "🌙";
 }
 
 /* Profile Styling */
 .hero-section {
   padding: 80px 50px;
-  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .hero-left {
   flex: 1;
   min-width: 300px;
-
 }
 
 .hero-left h1 {
@@ -80,11 +160,13 @@ h2 {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 20px;
+  color: var(--text-color);
 }
 
 .hero-left p {
   font-size: 20px;
   margin-bottom: 20px;
+  color: var(--text-color);
 }
 
 .highlight-orange {
@@ -101,7 +183,7 @@ h2 {
 
 .btn-primary {
   background: linear-gradient(to right, #4f46e5, #3b82f6);
-  color: white;
+  color: #fff;
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
@@ -119,7 +201,7 @@ h2 {
 
 .social-icons a i {
   font-size: 36px;
-  color: #333;
+  color: var(--text-color);
   padding: 3px;
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -137,12 +219,13 @@ h2 {
 }
 
 .profile-pic-bg {
-  background: #131010;
+  background: var(--bg-color);
   border-radius: 50%;
   display: inline-block;
   width: 300px;
   height: 300px;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* subtle shadow to separate */
 }
 
 .profile-pic {
@@ -153,17 +236,20 @@ h2 {
   border-radius: 50%;
 }
 
-/* About Styling */
-
+/* About Section Styling */
 .about-section {
   padding: 60px 20px;
   text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #222;
+  color: var(--text-color) !important;
+  transition: color 0.3s;
 }
 
 /* Top layout: image + text */
@@ -179,10 +265,10 @@ h2 {
 
 /* Profile image box */
 .about-image-box {
-  background: #fff;
+  background: var(--bg-color);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* stronger shadow for dark mode */
   max-width: 300px;
   flex-shrink: 0;
   margin-left: 46px;
@@ -193,6 +279,7 @@ h2 {
   border-radius: 10px;
 }
 
+/* Description text */
 .about-description {
   flex: 1;
   display: flex;
@@ -202,21 +289,21 @@ h2 {
 
 .about-description h3 {
   font-size: 1.6rem;
-  color: #f13669;
+  color: #f13669; /* Accent stays the same */
   margin-bottom: 15px;
   margin-top: 0;
-  padding-top: 0;
   line-height: 1;
   align-self: flex-start;
 }
 
 .about-description p {
   font-size: 1rem;
-  color: #444;
+  color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
+/* Resume Button */
 .resume-btn {
   display: inline-block;
   background-color: #f13669;
@@ -228,19 +315,20 @@ h2 {
   font-size: 0.95rem;
   width: fit-content;
   white-space: nowrap;
+  transition: background 0.3s;
 }
 
 .resume-btn:hover {
   background-color: #d82e5e;
 }
 
-
-/* Bottom education row */
+/* Bottom Education Row */
 .education-cards-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  flex: 1;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -248,11 +336,12 @@ h2 {
 .edu-card {
   flex: 1;
   min-width: 250px;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* slightly stronger shadow */
   text-align: left;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .edu-card h4 {
@@ -263,11 +352,11 @@ h2 {
 
 .edu-card p {
   margin: 5px 0;
-  color: #333;
+  color: var(--text-color);
 }
 
 .edu-card span {
-  color: #666;
+  color: #999; /* lighter gray for dark mode readability */
   font-size: 0.95rem;
 }
 
@@ -275,13 +364,11 @@ h2 {
 .education-wrapper {
   display: flex;
   align-items: center;
-  /* ⬅️ vertically center */
   justify-content: center;
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto 60px;
 }
-
 
 /* Vertical Text - Education */
 .education-vertical-label {
@@ -294,43 +381,35 @@ h2 {
   padding: 10px 0;
 }
 
-/* Move existing education-cards-row inside education-wrapper */
-.education-cards-row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex: 1;
-  flex-wrap: wrap;
-}
-
-
-/* skills styling */
-
+/* Skills Section Styling */
 .skills-section {
   padding: 60px 20px;
   text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
 }
 
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #222;
+  color: var(--text-color); /* will switch automatically with dark mode */
+  transition: color 0.3s;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* Fixed 4 per row */
   gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .skill-card {
-  background: white;
+  background-color: var(--bg-color); /* adapt to dark/light mode */
   padding: 35px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* stronger shadow for contrast in dark mode */
   min-height: 160px;
   display: flex;
   flex-direction: column;
@@ -346,81 +425,61 @@ h2 {
 .skill-icon {
   font-size: 2.8rem;
   margin-bottom: 14px;
+  color: var(--text-color); /* icon adapts to theme */
+  transition: color 0.3s;
 }
 
 .skill-name {
   font-weight: 600;
   font-size: 1.2rem;
-  color: #333;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
-/* project styling */
-/* Main Projects Section */
+/* Projects Section Styling */
 .projects-section {
   padding: 60px 20px;
-  background: #f9f9f9;
+  background-color: var(--bg-color);
+  transition: background 0.3s, color 0.3s;
 }
 
 .section-title {
   text-align: center;
   font-size: 32px;
   margin-bottom: 40px;
+  color: var(--text-color); /* adapts to theme */
+  transition: color 0.3s;
 }
 
-/* Grid container to hold 2 side-by-side cards */
-.projects-section {
-  padding: 60px 20px;
-  background: #f9f9f9;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-/* Grid container with room for wider cards */
-.projects-section {
-  padding: 60px 20px;
-  background: #f9f9f9;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-/* Project styling */
+/* Project Grid */
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
-  /* ⬅️ Tight gap */
   max-width: 1220px;
   margin: 0 auto;
 }
 
-/* Wider project wrapper */
+/* Project Wrapper */
 .project-wrapper {
   flex: 0 0 calc(50% - 7.5px);
-  /* ⬅️ Half of width minus half of the 15px gap */
   margin-bottom: 10px;
 }
 
-/* Project card layout: image left, content right */
+/* Project Card */
 .project-row {
   display: flex;
   align-items: stretch;
   gap: 20px;
-  background: #fff;
+  background-color: var(--bg-color);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* stronger for dark mode */
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
-/* Image section */
+/* Image Section */
 .project-image-card {
   flex-shrink: 0;
   display: flex;
@@ -429,18 +488,15 @@ h2 {
   justify-content: flex-start;
 }
 
-
 .project-image-card img {
   width: 190px;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
   margin-bottom: 12px;
-  /* ⬅️ Add this to separate image and links */
 }
 
-
-/* Text content */
+/* Text Content */
 .project-content {
   flex: 1;
   display: flex;
@@ -451,7 +507,8 @@ h2 {
 .project-heading {
   margin: 0 0 10px 0;
   font-size: 1.5rem;
-  color: #222;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .project-points {
@@ -462,7 +519,7 @@ h2 {
 
 .project-points li {
   margin-bottom: 6px;
-  color: #444;
+  color: var(--text-color);
   font-size: 0.95rem;
 }
 
@@ -471,7 +528,7 @@ h2 {
   display: inline-block;
   margin-right: 10px;
   padding: 6px 12px;
-  background-color: #f13669;
+  background-color: #f13669; /* accent stays same */
   color: white;
   border-radius: 6px;
   text-decoration: none;
@@ -480,22 +537,22 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
+.project-links a:hover {
+  background-color: #d82e5e;
+}
+
 .project-links.under-image {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  /* Equal gap between buttons */
   margin-top: 14px;
-  /* Gap between image and buttons */
 }
 
 .project-links.under-image a {
   width: 85%;
-  /* ⬅️ Slightly wider for breathing room */
   text-align: center;
   padding: 6px 12px;
-  /* Balanced padding */
   background-color: #f13669;
   color: white;
   border-radius: 6px;
@@ -509,48 +566,39 @@ h2 {
   background-color: #d82e5e;
 }
 
-
-.project-links a:hover {
-  background-color: #d82e5e;
-}
-
-
-/* Contact Section */
-
+/* Contact Section Styling */
 .contact-section {
   padding: 60px 20px;
-  /* background-color: #f6f6f6; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
 }
 
 .contact-container {
   display: flex;
   align-items: stretch;
-  /* 🔥 this forces both boxes to match height */
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 30px;
 }
 
-
-
 /* Left Box */
 .contact-box {
   flex: 1;
-  background-color: #fff;
+  background-color: var(--bg-color);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* stronger for dark mode */
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* ⬅️ ensures full height */
+  transition: background 0.3s, box-shadow 0.3s;
 }
-
 
 .contact-box-heading {
   font-size: 1.2rem;
-  color: #f13669;
+  color: #f13669; /* accent stays the same */
   margin-bottom: 15px;
   padding: 0;
   align-self: flex-start;
@@ -561,12 +609,11 @@ h2 {
   flex-direction: column;
   gap: 12px;
   margin-left: 10px;
-  /* gap from left edge */
 }
 
 .contact-box-content .label {
   font-size: 0.95rem;
-  color: #333;
+  color: var(--text-color);
   font-weight: 500;
   text-align: left;
 }
@@ -580,7 +627,7 @@ h2 {
 
 .social-icons a {
   text-decoration: none;
-  color: #007bff;
+  color: #007bff; /* accent remains visible in dark mode */
   font-size: 0.9rem;
 }
 
@@ -588,22 +635,19 @@ h2 {
   text-decoration: underline;
 }
 
-
 /* Right Contact Form */
 .contact-form-box {
   flex: 0.95;
   max-width: 460px;
-  background-color: #fff;
+  background-color: var(--bg-color);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* stronger for dark mode */
   height: 100%;
-  /* ⬅️ ensures full height */
   display: flex;
   flex-direction: column;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-
-
 
 .contact-form {
   display: flex;
@@ -617,6 +661,9 @@ h2 {
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 0.95rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
 .contact-form button {
@@ -631,19 +678,20 @@ h2 {
   margin-top: 8px;
 }
 
-/* footer styling */
+/* Footer Styling */
 .footer {
-  color: #ff0000;
+  color: #ff0000; /* keep accent color */
   text-align: center;
   padding: 20px 0;
   font-size: 1.1rem;
+  background-color: var(--bg-color); /* adapts to theme */
+  transition: background 0.3s, color 0.3s;
 }
 
 /* ======= RESPONSIVE QUERIES ======= */
 @media (max-width: 1024px) {
-  /* Global Spacing */
 
-
+/* Global Spacing */
   section,
   .hero-section,
   .about-section,
@@ -842,25 +890,25 @@ h2 {
     padding: 14px 0;
   }
 
-  /* Disable animations */
+  /* Disable animations
   .project-row,
   .skill-card,
   .project-links a,
   .project-wrapper,
   .project-image-card,
   .project-content {
-    transition: none !important;
-    transform: none !important;
-    box-shadow: none !important;
-  }
+    /* transition: none !important; */
+    /* transform: none !important; */
+    /* box-shadow: none !important; */
+  /* } */ 
 
   .project-row:hover,
   .skill-card:hover,
   .project-links a:hover {
-    transform: none !important;
-    background-color: inherit !important;
-    box-shadow: none !important;
-    color: inherit !important;
+    /* transform: none !important; */
+    /* background-color: inherit !important; */
+    /* box-shadow: none !important; */
+    /* color: inherit !important; */
   }
 
   .project-row,
@@ -1076,18 +1124,18 @@ h2 {
   .project-wrapper,
   .project-image-card,
   .project-content {
-    transition: none !important;
-    transform: none !important;
-    box-shadow: none !important;
+    /* transition: none !important;
+    transform: none !important; */
+    /* box-shadow: none !important; */
   }
 
   .project-row:hover,
   .skill-card:hover,
   .project-links a:hover {
-    transform: none !important;
-    background-color: inherit !important;
-    box-shadow: none !important;
-    color: inherit !important;
+    /* transform: none !important; */
+    /* background-color: inherit !important; */
+    /* box-shadow: none !important; */
+    /* color: inherit !important; */
   }
 
   /* ===== Contact Section ===== */
@@ -1155,7 +1203,6 @@ h2 {
     font-size: 22px !important;
     padding: 2px !important;
   }
-
 
   /* Hero Section */
   .hero-heading {
@@ -1261,18 +1308,18 @@ h2 {
   .project-wrapper,
   .project-image-card,
   .project-content {
-    transition: none !important;
-    transform: none !important;
-    box-shadow: none !important;
+    /* transition: none !important;
+    transform: none !important; */
+    /* box-shadow: none !important; */
   }
 
   .project-row:hover,
   .skill-card:hover,
   .project-links a:hover {
-    transform: none !important;
-    background-color: inherit !important;
-    box-shadow: none !important;
-    color: inherit !important;
+    /* transform: none !important; */
+    /* background-color: inherit !important; */
+    /* box-shadow: none !important; */
+    /* color: inherit !important; */
   }
 
   .project-row,
@@ -1345,4 +1392,57 @@ h2 {
     font-size: 0.9rem;
     padding: 12px 0;
   }
+
+  
+}
+
+@media (max-width: 414px) {
+  /* ===== Navbar ===== */
+  
+  .nav-right a {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .switch {
+  margin-left: 10px;
+}
+}
+
+
+@media (max-width: 393px) {
+  /* ===== Navbar ===== */
+  
+  .nav-right a {
+    font-size: 15px;
+    margin-left: 6px;
+  }
+
+  .switch {
+  margin-left: 5px;
+  width: 40px;
+  height: 25px;
+}
+
+
+input:checked + .slider::before {
+  transform: translateX(13px);
+  content: "🌙";
+}
+}
+
+
+@media (max-width: 343px) {
+  /* ===== Navbar ===== */
+  
+  .nav-right a {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+  .switch {
+  margin-left: 2px;
+  width: 40px;
+  height: 25px;
+}
 }

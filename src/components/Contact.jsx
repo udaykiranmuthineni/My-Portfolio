@@ -12,7 +12,7 @@ const Contact = () => {
   <h3 className="contact-box-heading">Let’s Connect👋</h3>
 
   <div className="contact-box-content">
-    <p className="label">📧 Email: emample@gmail.com</p>
+    <p className="label">📧 Email: udaykiranmuthineni123@gmail.com</p>
     <p className="label">📞 Contact: +91-0123456789</p>
     <p className="label">📍 Location: Hyderabad, India</p>
   </div>
