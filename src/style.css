@@ -22,18 +22,13 @@
   border-radius: 12px;
 }
 
-/* Apply globally */
 body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s, color 0.3s;
-}
-
-body {
-  margin: 0;
-  /* background-color: #f8f8f8; */
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
 }
 
 section {
@@ -61,20 +56,18 @@ h1,h2 {
 
 /* Navbar Styling */
 .navbar {
-  background-color: var(--bg-color);
-  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 15px 40px;
   top: 0;
   z-index: 1000;
 }
 
+
 .nav-left {
   font-size: 35px;
   font-weight: bold;
-  color: var(--text-color);
 }
 
 .nav-right a {
@@ -146,8 +139,6 @@ input:checked + .slider::before {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: var(--bg-color);
-  color: var(--text-color);
 }
 
 .hero-left {
@@ -160,13 +151,11 @@ input:checked + .slider::before {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: var(--text-color);
 }
 
 .hero-left p {
   font-size: 20px;
   margin-bottom: 20px;
-  color: var(--text-color);
 }
 
 .highlight-orange {
@@ -240,15 +229,12 @@ input:checked + .slider::before {
 .about-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background 0.3s, color 0.3s;
 }
 
 .section-title {
   font-size: 2rem;
   margin-bottom: 40px;
-  color: var(--text-color) !important;
+  /* color: var(--text-color) !important; */
   transition: color 0.3s;
 }
 
@@ -265,7 +251,6 @@ input:checked + .slider::before {
 
 /* Profile image box */
 .about-image-box {
-  background: var(--bg-color);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* stronger shadow for dark mode */
@@ -298,7 +283,6 @@ input:checked + .slider::before {
 
 .about-description p {
   font-size: 1rem;
-  color: var(--text-color);
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -336,12 +320,10 @@ input:checked + .slider::before {
 .edu-card {
   flex: 1;
   min-width: 250px;
-  background-color: var(--bg-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* slightly stronger shadow */
   text-align: left;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .edu-card h4 {
@@ -352,7 +334,6 @@ input:checked + .slider::before {
 
 .edu-card p {
   margin: 5px 0;
-  color: var(--text-color);
 }
 
 .edu-card span {
@@ -385,15 +366,11 @@ input:checked + .slider::before {
 .skills-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background 0.3s, color 0.3s;
 }
 
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: var(--text-color); /* will switch automatically with dark mode */
   transition: color 0.3s;
 }
 
@@ -406,7 +383,6 @@ input:checked + .slider::before {
 }
 
 .skill-card {
-  background-color: var(--bg-color); /* adapt to dark/light mode */
   padding: 35px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* stronger shadow for contrast in dark mode */
@@ -425,30 +401,27 @@ input:checked + .slider::before {
 .skill-icon {
   font-size: 2.8rem;
   margin-bottom: 14px;
-  color: var(--text-color); /* icon adapts to theme */
   transition: color 0.3s;
 }
 
 .skill-name {
   font-weight: 600;
   font-size: 1.2rem;
-  color: var(--text-color);
   transition: color 0.3s;
 }
 
 /* Projects Section Styling */
 .projects-section {
   padding: 60px 20px;
-  background-color: var(--bg-color);
-  transition: background 0.3s, color 0.3s;
+  
 }
 
 .section-title {
   text-align: center;
   font-size: 32px;
   margin-bottom: 40px;
-  color: var(--text-color); /* adapts to theme */
   transition: color 0.3s;
+  
 }
 
 /* Project Grid */
@@ -472,11 +445,9 @@ input:checked + .slider::before {
   display: flex;
   align-items: stretch;
   gap: 20px;
-  background-color: var(--bg-color);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* stronger for dark mode */
-  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Image Section */
@@ -507,7 +478,6 @@ input:checked + .slider::before {
 .project-heading {
   margin: 0 0 10px 0;
   font-size: 1.5rem;
-  color: var(--text-color);
   transition: color 0.3s;
 }
 
@@ -519,7 +489,6 @@ input:checked + .slider::before {
 
 .project-points li {
   margin-bottom: 6px;
-  color: var(--text-color);
   font-size: 0.95rem;
 }
 
@@ -569,9 +538,6 @@ input:checked + .slider::before {
 /* Contact Section Styling */
 .contact-section {
   padding: 60px 20px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background 0.3s, color 0.3s;
 }
 
 .contact-container {
@@ -586,14 +552,12 @@ input:checked + .slider::before {
 /* Left Box */
 .contact-box {
   flex: 1;
-  background-color: var(--bg-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* stronger for dark mode */
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .contact-box-heading {
@@ -613,7 +577,6 @@ input:checked + .slider::before {
 
 .contact-box-content .label {
   font-size: 0.95rem;
-  color: var(--text-color);
   font-weight: 500;
   text-align: left;
 }
@@ -639,14 +602,12 @@ input:checked + .slider::before {
 .contact-form-box {
   flex: 0.95;
   max-width: 460px;
-  background-color: var(--bg-color);
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* stronger for dark mode */
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .contact-form {
@@ -684,8 +645,6 @@ input:checked + .slider::before {
   text-align: center;
   padding: 20px 0;
   font-size: 1.1rem;
-  background-color: var(--bg-color); /* adapts to theme */
-  transition: background 0.3s, color 0.3s;
 }
 
 /* ======= RESPONSIVE QUERIES ======= */
@@ -934,6 +893,7 @@ input:checked + .slider::before {
     flex-direction: column;
     gap: 15px;
     padding: 15px 20px;
+    position:relative;
   }
 
   .nav-left {
@@ -1204,6 +1164,9 @@ input:checked + .slider::before {
     padding: 2px !important;
   }
 
+  .navbar{
+    position:relative;
+  }
   /* Hero Section */
   .hero-heading {
     font-size: 1rem;
