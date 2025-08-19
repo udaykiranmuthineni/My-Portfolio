@@ -1330,11 +1330,13 @@ input:checked + .slider::before {
   margin-left: 10px;
   width: 40px;
   height: 25px;
+  align-items: center;
 }
 
 input:checked + .slider::before {
   transform: translateX(14px);
 }
+
 
 }
 
