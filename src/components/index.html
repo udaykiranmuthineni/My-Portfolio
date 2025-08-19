@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects Demo Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+      color: #111;
+    }
+
+    .project-points {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .tech-stack {
+      margin-top: 15px;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: #eee;
+      color: #333;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 5px 6px 0 0;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .tech-badge:hover {
+      background: #007bff;
+      color: #fff;
+      transform: scale(1.08);
+    }
+
+    .skill-bar {
+      height: 6px;
+      border-radius: 4px;
+      background: #ddd;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #007bff, #00d4ff);
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      margin-right: 12px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🚀 My Projects</h2>
+
+  <div class="project-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="https://via.placeholder.com/600x180" alt="Todo App" class="project-image">
+      <div class="project-content">
+        <h3>Advanced ToDo List App</h3>
+        <ul class="project-points">
+          <li>Manage ToDos, notes, events, expenses, and birthdays.</li>
+          <li>Stored offline using localStorage – no login needed.</li>
+          <li>Deadlines, priorities, and repeat tasks with calendar view.</li>
+        </ul>
+
+        <!-- Tech stack -->
+        <div class="tech-stack">
+          <span class="tech-badge">🟨 JavaScript</span>
+          <span class="tech-badge">🎨 CSS</span>
+          <span class="tech-badge">📄 HTML</span>
+        </div>
+
+        <!-- Skill level bars -->
+        <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+
+        <!-- Links -->
+        <div class="links">
+          <a href="#">🔗 GitHub</a>
+          <a href="#">🌐 Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="https://via.placeholder.com/600x180" alt="Resume Builder" class="project-image">
+      <div class="project-content">
+        <h3>Resume Builder</h3>
+        <ul class="project-points">
+          <li>Live preview with multiple template options.</li>
+          <li>Dynamic fields auto-update as you type.</li>
+          <li>Exports to printable PDFs.</li>
+        </ul>
+
+        <!-- Tech stack -->
+        <div class="tech-stack">
+          <span class="tech-badge">📄 HTML</span>
+          <span class="tech-badge">🎨 CSS</span>
+          <span class="tech-badge">🟨 JavaScript</span>
+          <span class="tech-badge">📱 Responsive</span>
+        </div>
+
+        <!-- Skill level bars -->
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+
+        <!-- Links -->
+        <div class="links">
+          <a href="#">🔗 GitHub</a>
+          <a href="#">🌐 Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

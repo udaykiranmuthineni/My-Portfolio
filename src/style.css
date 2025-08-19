@@ -1,4 +1,4 @@
-/* Global Theme Variables */
+
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -24,7 +24,7 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+ font-family: 'Segoe UI', sans-serif;
   color: #333;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -157,6 +157,59 @@ input:checked + .slider::before {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
+/* 🎯 Style 1: Modern & Clean (great for portfolios) */
+/* .hero-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #222;
+}
+
+.hero-heading .highlight-orange {
+  color: #ff7b00; 
+}
+
+.hero-heading .highlight-blue {
+  color: #0077ff; 
+} */
+
+
+/* .hero-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+.hero-heading .highlight-orange {
+  color: #e63946; 
+}
+
+.hero-heading .highlight-blue {
+  color: #4361ee;
+} */
+
+/* ⚡ Style 3: Futuristic / Techy */
+/* .hero-heading {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #0f172a;
+  letter-spacing: 2px;
+}
+
+.hero-heading .highlight-orange {
+  color: #ff4d00; 
+}
+
+.hero-heading .highlight-blue {
+  color: #00d4ff; 
+} */
 
 .highlight-orange {
   color: #ffa500;
@@ -489,6 +542,36 @@ input:checked + .slider::before {
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
+
+/* icons in projects */
+.project-tech {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-badge:hover {
+  transform: translateY(-1.5px); /* smaller lift */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12); /* softer shadow */
+}
+
+.tech-icon {
+  font-size: 15px;
+}
+
 
 /* Buttons */
 .project-links a {
