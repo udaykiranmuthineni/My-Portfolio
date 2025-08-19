@@ -17,7 +17,7 @@ const About = () => {
 
         {/* Description aligned to top of image */}
         <div className="about-description">
-          <h3 className="aligned-role">Software Developer</h3>
+          <h3 className="aligned-role">Full Stack Developer</h3>
           <p>
             I’m Muthineni Uday Kiran, a BSc Computer Science graduate with hands-on
             experience in both front-end and back-end development. I have strong analytical

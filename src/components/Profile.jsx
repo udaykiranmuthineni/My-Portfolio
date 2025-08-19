@@ -9,9 +9,12 @@ const Profile = () => {
           Hi <span classname="hide">There, </span><br />
           I'm <span className="highlight-orange">Uday</span> <span className="highlight-blue">Kiran</span>
         </h1>
-        <p><span className="highlight-red">Welcome</span> to my personal portfolio built with React.js.<br>
-        </br>Here, you’ll get to know a bit about me — my skills,<br></br> projects I've worked on, my education and more.<br>
-        </br>Feel free to explore and see what I’ve been working on!</p>
+        <p>
+  <span className="highlight-red">Welcome</span> to my digital space 🚀<br />
+  A showcase of my skills, projects, and journey in tech.<br />
+  Dive in and discover what I’ve been creating!
+</p>
+
 
         <a href="#about" className="btn-primary">
           Connect with me ↓
