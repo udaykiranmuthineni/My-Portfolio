@@ -41,27 +41,21 @@ const About = () => {
       <h4>Degree</h4>
       <p>B.Sc Computer Science</p>
       <p>Vaagdevi Degree & P.G College</p>
-      <p>CGPA: 65%</p>
       <p>2020-2023</p>
-      <p>Hanamkonda</p>
       {/* <span>CGPA: 65%</span> */}
     </div>
 
     <div className="edu-card">
       <h4>Intermediate</h4>
       <p>Sri Vedha Junior College</p>
-      <p>CGPA: 54%</p>
       <p>2018-2020</p>
-      <p>Bheemaram</p>
       {/* <span>CGPA: 54%</span> */}
     </div>
 
     <div className="edu-card">
       <h4>School</h4>
       <p>Saketha High School</p>
-      <p>CGPA: 86%</p>
       <p>2016-2018</p>
-      <p>Bheemaram</p>
       {/* <span>CGPA: 86%</span> */}
     </div>
   </div>

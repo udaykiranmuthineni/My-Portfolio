@@ -158,59 +158,6 @@ input:checked + .slider::before {
   margin-bottom: 20px;
 }
 
-/* 🎯 Style 1: Modern & Clean (great for portfolios) */
-/* .hero-heading {
-  font-family: "Poppins", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #222;
-}
-
-.hero-heading .highlight-orange {
-  color: #ff7b00; 
-}
-
-.hero-heading .highlight-blue {
-  color: #0077ff; 
-} */
-
-
-/* .hero-heading {
-  font-family: "Playfair Display", serif;
-  font-size: 3.2rem;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #111;
-  letter-spacing: 1px;
-}
-
-.hero-heading .highlight-orange {
-  color: #e63946; 
-}
-
-.hero-heading .highlight-blue {
-  color: #4361ee;
-} */
-
-/* ⚡ Style 3: Futuristic / Techy */
-/* .hero-heading {
-  font-family: "Orbitron", sans-serif;
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #0f172a;
-  letter-spacing: 2px;
-}
-
-.hero-heading .highlight-orange {
-  color: #ff4d00; 
-}
-
-.hero-heading .highlight-blue {
-  color: #00d4ff; 
-} */
-
 .highlight-orange {
   color: #ffa500;
 }
@@ -572,7 +519,9 @@ input:checked + .slider::before {
   font-size: 15px;
 }
 
-
+.tech-name{
+ color: #000;
+}
 /* Buttons */
 .project-links a {
   display: inline-block;
