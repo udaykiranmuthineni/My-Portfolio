@@ -5,9 +5,28 @@ import 'aos/dist/aos.css';
 import projectImg2 from '../assets/student-employee-management.png';
 import projectImg1 from '../assets/todo-app.png';
 import projectImg3 from '../assets/resume-builder.png';
-import projectImg4 from '../assets/personal-portfolio.png';
+import projectImg4 from '../assets/charvin-app.png';
 
 const projectList = [
+  {
+  title: "Charvin Food App",
+  image: projectImg4,
+  bullets: [
+    "Developed a cross-platform food ordering app using React Native and Expo.",
+    "Implemented modern UI with smooth navigation, category browsing, and dish details.",
+    "Built cart functionality with add/remove items and dynamic order summary.",
+  ],
+  tech: [
+    { name: "React Native", icon: "📱" },
+    { name: "Expo", icon: "🚀" },
+    { name: "JavaScript", icon: "📜" },
+    { name: "React Navigation", icon: "🧭" },
+    { name: "Context API", icon: "🗂️" },
+    { name: "Responsive UI", icon: "🎨" }
+  ],
+  github: "https://drive.google.com/drive/folders/1OP8EZFbmuf7dfk2niSwIW_MWKyC0YArD?usp=drive_link",
+  demo: "https://expo.dev/accounts/udaykiranmuthineni/projects/charvin-app/builds/1c584fdf-5b46-4270-b32f-81742de7e1dc"
+},
   {
     title: "Advanced ToDo List App",
     image: projectImg1,
@@ -66,26 +85,6 @@ const projectList = [
     github: "https://github.com/udaykiranmuthineni/Resume-Builder",
     demo: "https://resume-builder-project-demo.netlify.app/"
   },
-  {
-    title: "Personal Portfolio",
-    image: projectImg4,
-    bullets: [
-      "Designed a modern portfolio site to showcase work, skills, and contact details cleanly.",
-      "Includes sections for projects, bio, resume, and a built-in form for quick messaging.",
-      "Projects are displayed with live links and show technologies used with short blurbs.",
-      "Site is fully responsive, loads fast, and works well across devices and screen sizes."
-    ],
-    tech: [
-      { name: "HTML", icon: "🌐" },
-      { name: "CSS", icon: "🎨" },
-      { name: "JavaScript", icon: "📜" },
-      { name: 'Bootstrap', icon: '🅱️' },
-      { name: "React JS", icon: "⚛️" },
-      { name: "Responsive", icon: "📱" },
-    ],
-    github: "https://github.com/udaykiranmuthineni/My-Portfolio",
-    demo: "https://muthineni-uday-portfolio.netlify.app/"
-  }
 ];
 
 const Projects = () => {
