@@ -9,7 +9,7 @@ import projectImg4 from '../assets/charvin-app.png';
 
 const projectList = [
   {
-  title: "Charvin Food App",
+  title: "Charvin - App",
   image: projectImg4,
   bullets: [
     "Developed a cross-platform food ordering app using React Native and Expo.",
@@ -24,7 +24,7 @@ const projectList = [
     { name: "Context API", icon: "🗂️" },
     { name: "Responsive UI", icon: "🎨" }
   ],
-  github: "https://drive.google.com/drive/folders/1OP8EZFbmuf7dfk2niSwIW_MWKyC0YArD?usp=drive_link",
+  alt: "https://drive.google.com/drive/folders/1OP8EZFbmuf7dfk2niSwIW_MWKyC0YArD?usp=drive_link",
   demo: "https://expo.dev/accounts/udaykiranmuthineni/projects/charvin-app/builds/1c584fdf-5b46-4270-b32f-81742de7e1dc"
 },
   {
@@ -104,9 +104,22 @@ const Projects = () => {
               <div className="project-image-card">
                 <img src={proj.image} alt={proj.title} />
                 <div className="project-links under-image">
-                  <a href={proj.github} target="_blank" rel="noreferrer">🔗 GitHub</a>
-                  <a href={proj.demo} target="_blank" rel="noreferrer">🌐 Live Demo</a>
-                </div>
+  {/* Show GitHub only if it exists */}
+  {proj.github && (
+    <a href={proj.github} target="_blank" rel="noreferrer">🔗 GitHub</a>
+  )}
+
+  {/* Show Demo only if it exists */}
+  {proj.demo && (
+    <a href={proj.demo} target="_blank" rel="noreferrer">🌐 Live Demo</a>
+  )}
+
+  {/* Optional: Add a custom link if no GitHub */}
+  {!proj.github && proj.alt && (
+    <a href={proj.alt} target="_blank" rel="noreferrer">📁 Resource</a>
+  )}
+</div>
+
               </div>
 
               {/* Right: Content */}
